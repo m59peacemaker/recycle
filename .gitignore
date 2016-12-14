@@ -1,0 +1,11 @@
+# Generated code
+/index.js
+/recycle.js
+/adapter
+/plugins
+_book
+
+node_modules
+.DS_Store
+npm-debug.log
+/todo

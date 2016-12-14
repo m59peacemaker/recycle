@@ -1,0 +1,848 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Without Store · Recycle</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="TodoMVCStore.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Read Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../quick-start/">
+            
+                <a href="../../quick-start/">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../quick-start/HelloWorld.html">
+            
+                <a href="../../quick-start/HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../quick-start/StatefulComponent.html">
+            
+                <a href="../../quick-start/StatefulComponent.html">
+            
+                    
+                    Stateful Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../quick-start/ParentChild.html">
+            
+                <a href="../../quick-start/ParentChild.html">
+            
+                    
+                    Parent-Child Relationship
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../quick-start/UsingReactComponents.html">
+            
+                <a href="../../quick-start/UsingReactComponents.html">
+            
+                    
+                    Using React Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Advanced Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Autocomplete.html">
+            
+                <a href="../Autocomplete.html">
+            
+                    
+                    Autocomplete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../WebsocketEcho.html">
+            
+                <a href="../WebsocketEcho.html">
+            
+                    
+                    WebSocket Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    TodoMVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.3.1" data-path="TodoMVCNoPlugin.html">
+            
+                <a href="TodoMVCNoPlugin.html">
+            
+                    
+                    Without Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="TodoMVCStore.html">
+            
+                <a href="TodoMVCStore.html">
+            
+                    
+                    With Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="TodoMVCStoreIsolated.html">
+            
+                <a href="TodoMVCStoreIsolated.html">
+            
+                    
+                    Isolated Reducers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../api-reference/">
+            
+                <a href="../../api-reference/">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../api-reference/adapter.html">
+            
+                <a href="../../api-reference/adapter.html">
+            
+                    
+                    adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../api-reference/createRecycle.html">
+            
+                <a href="../../api-reference/createRecycle.html">
+            
+                    
+                    createRecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../api-reference/Component.html">
+            
+                <a href="../../api-reference/Component.html">
+            
+                    
+                    Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../api-reference/recycleRxjsOperators.html">
+            
+                <a href="../../api-reference/recycleRxjsOperators.html">
+            
+                    
+                    Recycle RxJS Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../api-reference/Plugins.html">
+            
+                <a href="../../api-reference/Plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Without Store</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="todomvc">TodoMVC</h2>
+<p>It&apos;s time to test Recycle with a bit more complex app - Implementation of a <a href="http://todomvc.com/" target="_blank">TodoMVC</a>. </p>
+<p>Like most of the TodoMVC implementations, this one will consist of two main components: <em>Todo</em> and <em>TodoList</em>.</p>
+<h2 id="todo">Todo</h2>
+<p>Let&apos;s start by defining what should our Todo look like in JSON format:</p>
+<pre><code class="lang-JSON">{id: <span class="hljs-number">2</span>, title: <span class="hljs-string">&apos;first todo&apos;</span>, completed: <span class="hljs-literal">false</span>}
+</code></pre>
+<p>It is obvious now that <code>&#xEC;d</code>, <code>title</code> and <code>completed</code> should be our component props. </p>
+<p>But, because this component is not static, we also need to use an internal state as well. 
+Its dynamic operations are: changing into editing mode and reacting on the input field in that mode. 
+From this information we can define our <code>initialState</code>:</p>
+<pre><code class="lang-javascript">initialState: {
+  editing: <span class="hljs-literal">false</span>,
+  inputVal: <span class="hljs-string">&apos;&apos;</span>
+}
+</code></pre>
+<h3 id="view">View</h3>
+<p>Props and state are all the data we need for defining a Todo component view:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">view</span> (<span class="hljs-params">jsx, props, state</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    &lt;li className={&apos;todoRoot &apos; + classNames({ completed: props.completed, editing: state.editing })}&gt;
+      &lt;div className=&apos;view&apos;&gt;
+        &lt;input className=&apos;toggle&apos; type=&apos;checkbox&apos; checked={props.completed} /&gt;
+        &lt;label&gt;{props.title}&lt;/label&gt;
+        &lt;button className=&apos;destroy&apos; /&gt;
+      &lt;/div&gt;
+      &lt;input className=&apos;edit&apos; type=&apos;text&apos; value={state.inputVal} /&gt;
+    &lt;/li&gt;
+  )
+}
+</code></pre>
+<p>One additional operation that can&apos;t be accomplished by rerendering our view (on props or state change) is -
+focusing and selecting Todo&apos;s input field when switching to editing mode. 
+For this, we can use <code>componentDidUpdate</code> hook:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">componentDidUpdate</span> (<span class="hljs-params">{select, state, prevState}</span>) </span>{
+  <span class="hljs-keyword">if</span> (!prevState.editing &amp;&amp; state.editing) {
+    <span class="hljs-keyword">const</span> node = select(<span class="hljs-string">&apos;input.edit&apos;</span>)
+    node.focus()
+    node.select()
+  }
+}
+</code></pre>
+<h3 id="actions">Actions</h3>
+<p>We can start our actions part of a component by selecting DOM elements which we need to observe for changes: </p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actions</span> (<span class="hljs-params">sources</span>) </span>{
+  <span class="hljs-keyword">const</span> toggleCheckbox = sources.DOM.select(<span class="hljs-string">&apos;.toggle&apos;</span>)
+  <span class="hljs-keyword">const</span> destroyIcon = sources.DOM.select(<span class="hljs-string">&apos;.destroy&apos;</span>)
+  <span class="hljs-keyword">const</span> editInput = sources.DOM.select(<span class="hljs-string">&apos;.edit&apos;</span>)
+  <span class="hljs-keyword">const</span> todoLabel = sources.DOM.select(<span class="hljs-string">&apos;label&apos;</span>)
+}
+</code></pre>
+<p>Defining component actions:</p>
+<ul>
+<li><p><code>type: &apos;destroy&apos;</code> with todo id when user clicks on <code>destroyIcon</code></p>
+<pre><code class="lang-javascript">destroyIcon
+  .events(<span class="hljs-string">&apos;click&apos;</span>)
+  .mapToLatest(sources.props)
+  .map(props =&gt; ({ type: <span class="hljs-string">&apos;destroy&apos;</span>, id: props.id }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;toggle&apos;</code> with todo id when user changes checkbox input on <code>toggleCheckbox</code></p>
+<pre><code class="lang-javascript">toggleCheckbox
+  .events(<span class="hljs-string">&apos;change&apos;</span>)
+  .mapToLatest(sources.props)
+  .map(props =&gt; ({ type: <span class="hljs-string">&apos;toggle&apos;</span>, id: props.id }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;startEdit&apos;</code> when user double clicks on <code>todoLabel</code></p>
+<pre><code class="lang-javascript">todoLabel
+  .events(<span class="hljs-string">&apos;dblclick&apos;</span>)
+  .mapTo({ type: <span class="hljs-string">&apos;startEdit&apos;</span> })
+</code></pre>
+</li>
+<li><p><code>type: &apos;inputVal&apos;</code> with current value on user input (in editing mode)</p>
+<pre><code class="lang-javascript">editInput
+  .events(<span class="hljs-string">&apos;input&apos;</span>)
+  .map(ev =&gt; ({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, value: ev.target.value }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;titleChanged&apos;</code> with todo id and current <code>inputVal</code> when ENTER_KEY is entered on input field (in editing mode)</p>
+<pre><code class="lang-javascript">editInput
+  .events(<span class="hljs-string">&apos;keyup&apos;</span>)
+  .filter(ev =&gt; ev.keyCode === ENTER_KEY)
+  .mapToLatest(sources.props, sources.state)
+  .map(({props, state}) =&gt; ({ type: <span class="hljs-string">&apos;titleChanged&apos;</span>, id: props.id, title: state.inputVal }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;cancelEdit&apos;</code> when ESC_KEY is entered on input field (in editing mode)</p>
+<pre><code class="lang-javascript">editInput
+  .events(<span class="hljs-string">&apos;keyup&apos;</span>)
+  .filter(ev =&gt; ev.keyCode === ESC_KEY)
+  .map(() =&gt; ({ type: <span class="hljs-string">&apos;cancelEdit&apos;</span> })),
+</code></pre>
+</li>
+<li><p><code>type: &apos;inputVal&apos;</code> with current todo title on <code>&apos;startEdit&apos;</code> and <code>&apos;cancelEdit&apos;</code> 
+(using already defined actions as our sources)</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;cancelEdit&apos;</span>)
+  .mapToLatest(sources.props)
+  .map(props =&gt; ({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, value: props.title })),
+
+sources.actions
+  .filterByType(<span class="hljs-string">&apos;startEdit&apos;</span>)
+  .mapToLatest(sources.props)
+  .map(props =&gt; ({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, value: props.title }))
+</code></pre>
+</li>
+</ul>
+<h3 id="reducers">Reducers</h3>
+<p>Reducers are used for changing a component state. 
+This means we need to update <code>editing</code> and <code>inputVal</code> state properties using component actions as our source.</p>
+<p>Defining component reducers:</p>
+<ul>
+<li><p>on <code>type: &apos;startEdit&apos;</code> set <code>editing = true</code>:</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;startEdit&apos;</span>)
+  .reducer(state =&gt; {
+    state.editing = <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;cancelEdit&apos;</code> set <code>editing = false</code>:</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;cancelEdit&apos;</span>)
+  .reducer(state =&gt; {
+    state.editing = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;titleChanged&apos;</code> set <code>editing = false</code>:</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;titleChanged&apos;</span>)
+  .reducer(state =&gt; {
+    state.editing = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;inputVal&apos;</code> set <code>inputVal = action.value</code>:</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;inputVal&apos;</span>)
+  .reducer((state, action) =&gt; {
+    state.inputVal = action.value
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+</ul>
+<h2 id="todolist">TodoList</h2>
+<p>Root component of a TodoMVC app is called  <em>TodoList</em>. 
+Its dynamic features are: an input field for adding new todo item 
+and a list of todo items:</p>
+<pre><code class="lang-JSON">initialState: {
+  inputVal: <span class="hljs-string">&apos;&apos;</span>,
+  list: []
+}
+</code></pre>
+<h3 id="view">View</h3>
+<p>To keep this guide as simple as possible, we will focus only on the header and the main section of a view:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">view</span> (<span class="hljs-params">jsx, props, state</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    &lt;header className=&apos;header&apos;&gt;
+      &lt;h1&gt;todos&lt;/h1&gt;
+      &lt;input
+        className=&apos;new-todo&apos;
+        type=&apos;text&apos;
+        value={state.inputVal}
+        placeholder=&apos;What needs to be done?&apos;
+        name=&apos;newTodo&apos; /&gt;
+    &lt;/header&gt;
+
+    ...
+
+    &lt;ul className=&apos;todo-list&apos;&gt;
+      {
+        state.list
+          .map(props =&gt; (
+            &lt;Todo
+              id={props.id}
+              title={props.title}
+              completed={props.completed}
+              key={props.id}
+            /&gt;
+          ))
+      }
+    &lt;/ul&gt;
+  )
+}
+</code></pre>
+<h3 id="actions">Actions</h3>
+<p>Selecting DOM elements which we need to observe for changes: </p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actions</span> (<span class="hljs-params">sources</span>) </span>{
+  <span class="hljs-keyword">const</span> newTodoInput = sources.DOM.select(<span class="hljs-string">&apos;.new-todo&apos;</span>)
+  <span class="hljs-keyword">const</span> toggleAll = sources.DOM.select(<span class="hljs-string">&apos;.toggle-all&apos;</span>)
+  <span class="hljs-keyword">const</span> clearCompleted = sources.DOM.select(<span class="hljs-string">&apos;.clear-completed&apos;</span>)
+}
+</code></pre>
+<p>Defining component actions:</p>
+<ul>
+<li><p><code>type: &apos;toggleTodo&apos;</code> with todo id when child component dispatches <code>type: &apos;toggle&apos;</code> action</p>
+<pre><code class="lang-javascript">sources.childrenActions
+  .filterByType(<span class="hljs-string">&apos;toggle&apos;</span>)
+  .map(action =&gt; ({ type: <span class="hljs-string">&apos;toggleTodo&apos;</span>, id: action.id }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;deleteTodo&apos;</code> with todo id when child component dispatches <code>type: &apos;destroy&apos;</code> action</p>
+<pre><code class="lang-javascript">sources.childrenActions
+  .filterByType(<span class="hljs-string">&apos;destroy&apos;</span>)
+  .map(action =&gt; ({ type: <span class="hljs-string">&apos;deleteTodo&apos;</span>, id: action.id }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;editTodo&apos;</code> with todo id when child component dispatches <code>type: &apos;titleChanged&apos;</code> action</p>
+<pre><code class="lang-javascript">sources.childrenActions
+  .filterByType(<span class="hljs-string">&apos;titleChanged&apos;</span>)
+  .map(action =&gt; ({ type: <span class="hljs-string">&apos;editTodo&apos;</span>, id: action.id }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;inputVal&apos;</code> with current value on user input</p>
+<pre><code class="lang-javascript">newTodoInput
+  .events(<span class="hljs-string">&apos;input&apos;</span>)
+  .map(e =&gt; ({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, payload: e.target.value }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;insertTodo&apos;</code> with current value when ENTER_KEY is entered on input field</p>
+<pre><code class="lang-javascript">newTodoInput
+  .events(<span class="hljs-string">&apos;keydown&apos;</span>)
+  .filter(e =&gt; e.keyCode === ENTER_KEY)
+  .map(e =&gt; e.target.value)
+  .filter(val =&gt; val.length &gt; <span class="hljs-number">0</span>)
+  .map(val =&gt; ({ type: <span class="hljs-string">&apos;insertTodo&apos;</span>, payload: val }))
+</code></pre>
+</li>
+<li><p><code>type: &apos;inputVal&apos;</code> with empty string (clearing input field) when todo is inserted</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;insertTodo&apos;</span>)
+  .mapTo({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, payload: <span class="hljs-string">&apos;&apos;</span> })
+</code></pre>
+</li>
+<li><p><code>type: &apos;inputVal&apos;</code> with empty string (clearing input field) when ESC_KEY is entered on input field</p>
+<pre><code class="lang-javascript">newTodoInput
+  .events(<span class="hljs-string">&apos;keydown&apos;</span>)
+  .filter(e =&gt; e.keyCode === ESC_KEY)
+  .mapTo({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, payload: <span class="hljs-string">&apos;&apos;</span> })
+</code></pre>
+</li>
+<li><p><code>type: &apos;toggleAll&apos;</code> when toggleAll is clicked</p>
+<pre><code class="lang-javascript">toggleAll
+  .events(<span class="hljs-string">&apos;click&apos;</span>)
+  .mapTo({ type: <span class="hljs-string">&apos;toggleAll&apos;</span> })
+</code></pre>
+</li>
+<li><p><code>type: &apos;deleteCompleted&apos;</code> when clearCompleted is clicked</p>
+<pre><code class="lang-javascript">clearCompleted
+  .events(<span class="hljs-string">&apos;click&apos;</span>)
+  .mapTo({ type: <span class="hljs-string">&apos;deleteCompleted&apos;</span> })
+</code></pre>
+<h3 id="reducers">Reducers</h3>
+<p>Defining component reducers:</p>
+</li>
+<li><p>on <code>type: &apos;inputVal&apos;</code> apply <code>inputVal</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;inputVal&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inputVal</span> (<span class="hljs-params">state, action</span>) </span>{
+    state.inputVal = action.payload
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;editTodo&apos;</code> apply <code>editTodo</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;editTodo&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">editTodo</span> (<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">let</span> todo = state.list.find(todo =&gt; todo.id === action.id)
+    todo.title = action.title
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;deleteTodo&apos;</code> apply <code>deleteTodo</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;deleteTodo&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteTodo</span> (<span class="hljs-params">state, action</span>) </span>{
+    state.list = state.list
+      .filter(todo =&gt; !(todo.id === action.id))
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;toggleTodo&apos;</code> apply <code>toggleTodo</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;toggleTodo&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleTodo</span> (<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">let</span> todo = state.list.find(todo =&gt; todo.id === action.id)
+    todo.completed = !todo.completed
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;toggleAll&apos;</code> apply <code>toggleAll</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;toggleAll&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleAll</span> (<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">let</span> amountCompleted = state.list
+      .filter(todoData =&gt; todoData.completed)
+      .length
+
+    <span class="hljs-keyword">let</span> amountActive = state.list.length - amountCompleted
+
+    state.list.forEach(todo =&gt; {
+      todo.completed = (amountActive)
+    })
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;deleteCompleted&apos;</code> apply <code>deleteCompleted</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;deleteCompleted&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteCompleted</span> (<span class="hljs-params">state, action</span>) </span>{
+    state.list = state.list
+      .filter(todo =&gt; todo.completed === <span class="hljs-literal">false</span>)
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+<li><p>on <code>type: &apos;insertTodo&apos;</code> apply <code>insertTodo</code> reducer</p>
+<pre><code class="lang-javascript">sources.actions
+  .filterByType(<span class="hljs-string">&apos;insertTodo&apos;</span>)
+  .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">insertTodo</span> (<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">let</span> lastId = state.list.length &gt; <span class="hljs-number">0</span>
+    ? state.list[state.list.length - <span class="hljs-number">1</span>].id : <span class="hljs-number">0</span>
+
+    state.list.push({
+      id: lastId + <span class="hljs-number">1</span>,
+      title: action.payload,
+      completed: <span class="hljs-literal">false</span>
+    })
+
+    <span class="hljs-keyword">return</span> state
+  })
+</code></pre>
+</li>
+</ul>
+<h2 id="complete-example">Complete Example</h2>
+<p>For a complete example with routing and localstorage support check <a href="https://github.com/recyclejs/recycle/tree/master/examples/TodoMVC" target="_blank">here</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: TodoMVC">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="TodoMVCStore.html" class="navigation navigation-next " aria-label="Next page: With Store">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Without Store","level":"1.3.3.1","depth":3,"next":{"title":"With Store","level":"1.3.3.2","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStore.md","ref":"docs/advanced-examples/todomvc/TodoMVCStore.md","articles":[]},"previous":{"title":"TodoMVC","level":"1.3.3","depth":2,"path":"docs/advanced-examples/todomvc/README.md","ref":"docs/advanced-examples/todomvc/README.md","articles":[{"title":"Without Store","level":"1.3.3.1","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","ref":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","articles":[]},{"title":"With Store","level":"1.3.3.2","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStore.md","ref":"docs/advanced-examples/todomvc/TodoMVCStore.md","articles":[]},{"title":"Isolated Reducers","level":"1.3.3.3","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStoreIsolated.md","ref":"docs/advanced-examples/todomvc/TodoMVCStoreIsolated.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/recyclejs/recycle/tree/master"},"github":{"url":"https://github.com/recyclejs/recycle/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Recycle","gitbook":">=3.2.1"},"file":{"path":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","mtime":"2016-12-06T14:25:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-14T23:46:53.023Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

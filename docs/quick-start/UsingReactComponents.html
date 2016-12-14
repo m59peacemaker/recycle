@@ -1,0 +1,577 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Using React Components · Recycle</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../advanced-examples/" />
+    
+    
+    <link rel="prev" href="ParentChild.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Read Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="HelloWorld.html">
+            
+                <a href="HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="StatefulComponent.html">
+            
+                <a href="StatefulComponent.html">
+            
+                    
+                    Stateful Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="ParentChild.html">
+            
+                <a href="ParentChild.html">
+            
+                    
+                    Parent-Child Relationship
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="UsingReactComponents.html">
+            
+                <a href="UsingReactComponents.html">
+            
+                    
+                    Using React Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../advanced-examples/">
+            
+                <a href="../advanced-examples/">
+            
+                    
+                    Advanced Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../advanced-examples/Autocomplete.html">
+            
+                <a href="../advanced-examples/Autocomplete.html">
+            
+                    
+                    Autocomplete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../advanced-examples/WebsocketEcho.html">
+            
+                <a href="../advanced-examples/WebsocketEcho.html">
+            
+                    
+                    WebSocket Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../advanced-examples/todomvc/">
+            
+                <a href="../advanced-examples/todomvc/">
+            
+                    
+                    TodoMVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../advanced-examples/todomvc/TodoMVCNoPlugin.html">
+            
+                <a href="../advanced-examples/todomvc/TodoMVCNoPlugin.html">
+            
+                    
+                    Without Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../advanced-examples/todomvc/TodoMVCStore.html">
+            
+                <a href="../advanced-examples/todomvc/TodoMVCStore.html">
+            
+                    
+                    With Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../advanced-examples/todomvc/TodoMVCStoreIsolated.html">
+            
+                <a href="../advanced-examples/todomvc/TodoMVCStoreIsolated.html">
+            
+                    
+                    Isolated Reducers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../api-reference/">
+            
+                <a href="../api-reference/">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../api-reference/adapter.html">
+            
+                <a href="../api-reference/adapter.html">
+            
+                    
+                    adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../api-reference/createRecycle.html">
+            
+                <a href="../api-reference/createRecycle.html">
+            
+                    
+                    createRecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../api-reference/Component.html">
+            
+                <a href="../api-reference/Component.html">
+            
+                    
+                    Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../api-reference/recycleRxjsOperators.html">
+            
+                <a href="../api-reference/recycleRxjsOperators.html">
+            
+                    
+                    Recycle RxJS Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../api-reference/Plugins.html">
+            
+                <a href="../api-reference/Plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Using React Components</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="using-react-components">Using React Components</h2>
+<p>Since, by default, Recycle uses React you can use React components in your Recycle app and vice versa.</p>
+<h3 id="react-in-recycle">React in Recycle</h3>
+<p>React component can be invoked in the same way as any other component - by defining it in a view:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// React component</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReactComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Hello from React Component!<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// View function of Recycle component</span>
+view (jsx) {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>This is a Recycle component<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>In which we are calling React component: <span class="hljs-tag">&lt;<span class="hljs-name">ReactComponent</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  )
+}
+</span></code></pre>
+<h3 id="recycle-in-react">Recycle in React</h3>
+<p>There are two ways in which you can use a Recycle component inside a React component. </p>
+<h4 id="converting-recycle-to-react">Converting Recycle to React</h4>
+<p>By converting it in React. Which is useful when using something like <a href="https://github.com/ReactTraining/react-router" target="_blank">React Router</a>:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// converting TodoList component in React</span>
+<span class="hljs-keyword">const</span> recycle = createRecycle({ adapter })
+<span class="hljs-keyword">const</span> TodoListReact = recycle.toReact(TodoList)
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// passing it inside React-Router</span>
+ReactDOM.render((
+  &lt;Router history={hashHistory}&gt;
+    &lt;Route path=&apos;/&apos; filter=&apos;&apos; component={TodoListReact} /&gt;
+    &lt;Route path=&apos;/completed&apos; filter=&apos;completed&apos; component={TodoListReact} /&gt;
+    &lt;Route path=&apos;/active&apos; filter=&apos;active&apos; component={TodoListReact} /&gt;
+  &lt;/Router&gt;
+), document.getElementById(&apos;app&apos;))
+</code></pre>
+<h4 id="calling-it-directly-recycle-react-recycle">Calling it Directly (Recycle-React-Recycle)</h4>
+<p>If you are &quot;switching&quot; from Recycle to React and then back to Recycle, you can call your components directly. But, for this to work, unlike a &quot;normal&quot; React component which is using a global <code>JSX handler</code> for creating elements (used here in a first example), this time we will use <code>JSX handler</code> which is passed from Recycle to a render method of your React component:</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReactComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render (jsx) {
+    <span class="hljs-comment">// when used inside Recycle component</span>
+    <span class="hljs-comment">// jsx handler will be passed in a render method of a react component</span>
+    <span class="hljs-comment">// necessary only if you need to call another Recycle component inside it </span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">RecycleComponent</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    )
+  }
+}
+</span></code></pre>
+<h3 id="jsx-pragma">JSX pragma</h3>
+<p>Since Recycle requires &quot;jsx&quot; pragma, if you configure babel to transpile your whole project (rather than using pragma only in files where Recycle view is defined) your React components will depend on <code>jsx</code> variable rather than <code>React.createElement</code>. Which is why <code>jsx</code> variable has to be in scope. </p>
+<p>One way is to define it using a global <code>React</code> instance:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">const</span> jsx = React.createElement
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReactComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Hello from React Component!<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<p>Or you can import it from <code>react-rxjs</code> adapter:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { React, ReactDOM, jsx } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;recyclejs/adapter/react-rxjs&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReactComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Hello from React Component!<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<h2 id="counter-example">Counter Example</h2>
+<p>An example of Click counter using React and Recycle: <a href="https://github.com/recyclejs/recycle/tree/master/examples/CombiningWithReact" target="_blank">here</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ParentChild.html" class="navigation navigation-prev " aria-label="Previous page: Parent-Child Relationship">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../advanced-examples/" class="navigation navigation-next " aria-label="Next page: Advanced Examples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Using React Components","level":"1.2.4","depth":2,"next":{"title":"Advanced Examples","level":"1.3","depth":1,"path":"docs/advanced-examples/README.md","ref":"docs/advanced-examples/README.md","articles":[{"title":"Autocomplete","level":"1.3.1","depth":2,"path":"docs/advanced-examples/Autocomplete.md","ref":"docs/advanced-examples/Autocomplete.md","articles":[]},{"title":"WebSocket Echo","level":"1.3.2","depth":2,"path":"docs/advanced-examples/WebsocketEcho.md","ref":"docs/advanced-examples/WebsocketEcho.md","articles":[]},{"title":"TodoMVC","level":"1.3.3","depth":2,"path":"docs/advanced-examples/todomvc/README.md","ref":"docs/advanced-examples/todomvc/README.md","articles":[{"title":"Without Store","level":"1.3.3.1","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","ref":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","articles":[]},{"title":"With Store","level":"1.3.3.2","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStore.md","ref":"docs/advanced-examples/todomvc/TodoMVCStore.md","articles":[]},{"title":"Isolated Reducers","level":"1.3.3.3","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStoreIsolated.md","ref":"docs/advanced-examples/todomvc/TodoMVCStoreIsolated.md","articles":[]}]}]},"previous":{"title":"Parent-Child Relationship","level":"1.2.3","depth":2,"path":"docs/quick-start/ParentChild.md","ref":"docs/quick-start/ParentChild.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/recyclejs/recycle/tree/master"},"github":{"url":"https://github.com/recyclejs/recycle/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Recycle","gitbook":">=3.2.1"},"file":{"path":"docs/quick-start/UsingReactComponents.md","mtime":"2016-12-06T14:25:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-14T23:46:53.023Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

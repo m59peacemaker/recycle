@@ -1,0 +1,638 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>WebSocket Echo · Recycle</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="todomvc/" />
+    
+    
+    <link rel="prev" href="Autocomplete.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Read Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick-start/">
+            
+                <a href="../quick-start/">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../quick-start/HelloWorld.html">
+            
+                <a href="../quick-start/HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../quick-start/StatefulComponent.html">
+            
+                <a href="../quick-start/StatefulComponent.html">
+            
+                    
+                    Stateful Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../quick-start/ParentChild.html">
+            
+                <a href="../quick-start/ParentChild.html">
+            
+                    
+                    Parent-Child Relationship
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../quick-start/UsingReactComponents.html">
+            
+                <a href="../quick-start/UsingReactComponents.html">
+            
+                    
+                    Using React Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Advanced Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Autocomplete.html">
+            
+                <a href="Autocomplete.html">
+            
+                    
+                    Autocomplete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="WebsocketEcho.html">
+            
+                <a href="WebsocketEcho.html">
+            
+                    
+                    WebSocket Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="todomvc/">
+            
+                <a href="todomvc/">
+            
+                    
+                    TodoMVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="todomvc/TodoMVCNoPlugin.html">
+            
+                <a href="todomvc/TodoMVCNoPlugin.html">
+            
+                    
+                    Without Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="todomvc/TodoMVCStore.html">
+            
+                <a href="todomvc/TodoMVCStore.html">
+            
+                    
+                    With Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="todomvc/TodoMVCStoreIsolated.html">
+            
+                <a href="todomvc/TodoMVCStoreIsolated.html">
+            
+                    
+                    Isolated Reducers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../api-reference/">
+            
+                <a href="../api-reference/">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../api-reference/adapter.html">
+            
+                <a href="../api-reference/adapter.html">
+            
+                    
+                    adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../api-reference/createRecycle.html">
+            
+                <a href="../api-reference/createRecycle.html">
+            
+                    
+                    createRecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../api-reference/Component.html">
+            
+                <a href="../api-reference/Component.html">
+            
+                    
+                    Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../api-reference/recycleRxjsOperators.html">
+            
+                <a href="../api-reference/recycleRxjsOperators.html">
+            
+                    
+                    Recycle RxJS Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../api-reference/Plugins.html">
+            
+                <a href="../api-reference/Plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >WebSocket Echo</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="recycle-plugins">Recycle Plugins</h2>
+<p>Suppose we need to write a Chat application. 
+This time a &quot;request-response&quot; type of communication like an ajax request from a previous example would not suffice. 
+Even if we write our WebSocket logic in actions of our component, 
+we will end up with a much more complex component than it should be.</p>
+<p>A chat component should not care about the way messages are delivered to the server 
+or whether it uses WebSockets or not. 
+Its implementation should be straightforward - describing conditions when a component should send an action 
+(sending a message) and how should the component state be changed when a message is received.</p>
+<p>Component connection to the &quot;outside world&quot; is in <code>sources</code> (available in component <code>actions</code> and <code>reducers</code>). 
+So if we choose not to write any communication logic in the component itself, 
+it is evident that we need to create a source. </p>
+<p>A source is representing a &quot;read&quot; operation of a component, 
+but our component also has a &quot;write&quot; operation: sending messages in a form of dispatching actions.</p>
+<p>For writing our communication logic we need both &quot;read&quot; (providing sources) 
+and &quot;write&quot; (listening to component actions) operations of a component. 
+In Recycle, this can be done - with plugins.</p>
+<h2 id="simple-websocket-plugin">Simple WebSocket Plugin</h2>
+<p>To demonstrate how plugins are created, 
+we can start by creating a simple WebSocket example - a component which sends a message 
+and displays responses from the server. 
+This component should also notify its connection status to the user. 
+For our server, we can use <a href="http://www.websocket.org/echo.html" target="_blank">WebSocket Echo</a>.</p>
+<p>Our component is again just a combination of actions, reducers and view. </p>
+<h3 id="view">View</h3>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">view</span> (<span class="hljs-params">jsx, props, state</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;h2&gt;Websocket Echo Test&lt;/h2&gt;
+      &lt;div&gt;Send: &lt;input value={state.inputVal} type=&apos;text&apos; /&gt;&lt;/div&gt;
+      &lt;br /&gt;
+      &lt;div&gt;Status: {state.status}&lt;/div&gt;
+      &lt;div&gt;Response: {state.response}&lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+</code></pre>
+<h3 id="actions">Actions</h3>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actions</span> (<span class="hljs-params">sources</span>) </span>{
+  <span class="hljs-keyword">const</span> input = sources.DOM.select(<span class="hljs-string">&apos;input&apos;</span>)
+
+  <span class="hljs-keyword">return</span> [
+    input
+      .events(<span class="hljs-string">&apos;input&apos;</span>)
+      .map(e =&gt; ({ type: <span class="hljs-string">&apos;inputVal&apos;</span>, payload: e.target.value })),
+
+    input
+      .events(<span class="hljs-string">&apos;keydown&apos;</span>)
+      .filter(e =&gt; e.keyCode === <span class="hljs-number">13</span>)
+      .latestFrom(sources.state)
+      .map(state =&gt; ({ type: <span class="hljs-string">&apos;send&apos;</span>, payload: state.inputVal }))
+  ]
+}
+</code></pre>
+<h3 id="reducers">Reducers</h3>
+<p>Besides using <code>sources.actions</code> as a source for our reducers, 
+we are also using two sources created with a plugin: <code>sources.websocketResponse</code> and <code>sources.websocketStatus</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducers</span> (<span class="hljs-params">sources</span>) </span>{
+  <span class="hljs-keyword">return</span> [
+    sources.actions
+      .filterByType(<span class="hljs-string">&apos;inputVal&apos;</span>)
+      .reducer((state, action) =&gt; {
+        state.inputVal = action.payload
+        <span class="hljs-keyword">return</span> state
+      }),
+
+    sources.websocketResponse
+      .reducer((state, data) =&gt; {
+        state.response = data
+        <span class="hljs-keyword">return</span> state
+      }),
+
+    sources.websocketStatus
+      .reducer((state, data) =&gt; {
+        state.status = data
+        <span class="hljs-keyword">return</span> state
+      })
+  ]
+}
+</code></pre>
+<h2 id="plugin-implementation">Plugin Implementation</h2>
+<p>Plugins are applied in <code>createRecycle</code> function:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> recycle = createRecycle({
+  adapter: adapter,
+  plugins: [
+    WebSocketPlugin
+  ]
+})
+</code></pre>
+<p> and its core implementation is as follows:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">WebSocketPlugin</span> (<span class="hljs-params">recycle, adapter</span>) </span>{
+
+  ...
+
+  recycle.on(<span class="hljs-string">&apos;componentInit&apos;</span>, (component) =&gt; {
+    component.setSource(<span class="hljs-string">&apos;websocketResponse&apos;</span>, response$)
+    component.setSource(<span class="hljs-string">&apos;websocketStatus&apos;</span>, status$)
+  })
+
+  recycle.on(<span class="hljs-string">&apos;action&apos;</span>, (action, component) =&gt; {
+    <span class="hljs-keyword">if</span> (action.type === <span class="hljs-string">&apos;send&apos;</span>) {
+      websocket.send(action.payload)
+    }
+  })
+}
+</code></pre>
+<p>That is all of the Recycle API you need for creating a plugin which provides additional sources to a component. 
+As you can see, we are listening to all components created in recycle instance (in this example only one component) and adding sources as observables - one for receiving WebSocket responses, 
+the other for displaying connection status if a connection is lost. </p>
+<p>The rest of the implementation logic has to do with RxJS for creating Observables and WebSocket API:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">WebSocketPlugin</span> (<span class="hljs-params">recycle, adapter</span>) </span>{
+
+  <span class="hljs-keyword">const</span> response$ = <span class="hljs-keyword">new</span> adapter.Subject()
+  <span class="hljs-keyword">const</span> status$ = <span class="hljs-keyword">new</span> adapter.Subject()
+
+  <span class="hljs-keyword">const</span> websocket = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">&apos;ws://echo.websocket.org/&apos;</span>)
+  websocket.onclose = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    status$.next(<span class="hljs-string">&apos;Connection closed.&apos;</span>)
+  }
+  websocket.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    status$.next(<span class="hljs-string">&apos;Connected to ws://echo.websocket.org&apos;</span>)
+  }
+  websocket.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    response$.next(evt.data)
+  }
+  websocket.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    response$.next(<span class="hljs-string">&apos;Error: &apos;</span> + evt.data)
+  }
+
+  recycle.on(<span class="hljs-string">&apos;componentInit&apos;</span>, (component) =&gt; {
+    component.setSource(<span class="hljs-string">&apos;websocketResponse&apos;</span>, response$)
+    component.setSource(<span class="hljs-string">&apos;websocketStatus&apos;</span>, status$)
+  })
+
+  recycle.on(<span class="hljs-string">&apos;action&apos;</span>, (action, component) =&gt; {
+    <span class="hljs-keyword">if</span> (action.type === <span class="hljs-string">&apos;send&apos;</span>) {
+      websocket.send(action.payload)
+    }
+  })
+}
+</code></pre>
+<h3 id="complete-example">Complete Example</h3>
+<p>For a complete example check <a href="https://github.com/recyclejs/recycle/tree/master/examples/Websocket" target="_blank">here</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Autocomplete.html" class="navigation navigation-prev " aria-label="Previous page: Autocomplete">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="todomvc/" class="navigation navigation-next " aria-label="Next page: TodoMVC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WebSocket Echo","level":"1.3.2","depth":2,"next":{"title":"TodoMVC","level":"1.3.3","depth":2,"path":"docs/advanced-examples/todomvc/README.md","ref":"docs/advanced-examples/todomvc/README.md","articles":[{"title":"Without Store","level":"1.3.3.1","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","ref":"docs/advanced-examples/todomvc/TodoMVCNoPlugin.md","articles":[]},{"title":"With Store","level":"1.3.3.2","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStore.md","ref":"docs/advanced-examples/todomvc/TodoMVCStore.md","articles":[]},{"title":"Isolated Reducers","level":"1.3.3.3","depth":3,"path":"docs/advanced-examples/todomvc/TodoMVCStoreIsolated.md","ref":"docs/advanced-examples/todomvc/TodoMVCStoreIsolated.md","articles":[]}]},"previous":{"title":"Autocomplete","level":"1.3.1","depth":2,"path":"docs/advanced-examples/Autocomplete.md","ref":"docs/advanced-examples/Autocomplete.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/recyclejs/recycle/tree/master"},"github":{"url":"https://github.com/recyclejs/recycle/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Recycle","gitbook":">=3.2.1"},"file":{"path":"docs/advanced-examples/WebsocketEcho.md","mtime":"2016-12-06T14:25:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-14T23:46:53.023Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

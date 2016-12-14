@@ -1,0 +1,585 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Stateful Component · Recycle</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ParentChild.html" />
+    
+    
+    <link rel="prev" href="HelloWorld.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Read Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="HelloWorld.html">
+            
+                <a href="HelloWorld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="StatefulComponent.html">
+            
+                <a href="StatefulComponent.html">
+            
+                    
+                    Stateful Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="ParentChild.html">
+            
+                <a href="ParentChild.html">
+            
+                    
+                    Parent-Child Relationship
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="UsingReactComponents.html">
+            
+                <a href="UsingReactComponents.html">
+            
+                    
+                    Using React Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../advanced-examples/">
+            
+                <a href="../advanced-examples/">
+            
+                    
+                    Advanced Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../advanced-examples/Autocomplete.html">
+            
+                <a href="../advanced-examples/Autocomplete.html">
+            
+                    
+                    Autocomplete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../advanced-examples/WebsocketEcho.html">
+            
+                <a href="../advanced-examples/WebsocketEcho.html">
+            
+                    
+                    WebSocket Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../advanced-examples/todomvc/">
+            
+                <a href="../advanced-examples/todomvc/">
+            
+                    
+                    TodoMVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../advanced-examples/todomvc/TodoMVCNoPlugin.html">
+            
+                <a href="../advanced-examples/todomvc/TodoMVCNoPlugin.html">
+            
+                    
+                    Without Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../advanced-examples/todomvc/TodoMVCStore.html">
+            
+                <a href="../advanced-examples/todomvc/TodoMVCStore.html">
+            
+                    
+                    With Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../advanced-examples/todomvc/TodoMVCStoreIsolated.html">
+            
+                <a href="../advanced-examples/todomvc/TodoMVCStoreIsolated.html">
+            
+                    
+                    Isolated Reducers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../api-reference/">
+            
+                <a href="../api-reference/">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../api-reference/adapter.html">
+            
+                <a href="../api-reference/adapter.html">
+            
+                    
+                    adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../api-reference/createRecycle.html">
+            
+                <a href="../api-reference/createRecycle.html">
+            
+                    
+                    createRecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../api-reference/Component.html">
+            
+                <a href="../api-reference/Component.html">
+            
+                    
+                    Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../api-reference/recycleRxjsOperators.html">
+            
+                <a href="../api-reference/recycleRxjsOperators.html">
+            
+                    
+                    Recycle RxJS Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../api-reference/Plugins.html">
+            
+                <a href="../api-reference/Plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Stateful Component</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="stateful-component">Stateful Component</h2>
+<p>In this example, we are going to create a simple stateful component with a button 
+and a message indicating how many times that button has been clicked.</p>
+<h3 id="view">View</h3>
+<p>We can start by defining a view:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">view</span> (<span class="hljs-params">jsx, props, state</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Times clicked: {state.timesClicked}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="actions">Actions</h3>
+<p>In Recycle all actions are defined separately, keeping the view &quot;clean&quot; (without <code>onClick</code>, <code>keyUp</code> or similar event handlers).</p>
+<p>Since we need to listen for click events on a button element, we can use <code>sources.DOM</code> for selecting a DOM element and return an action <code>{ type: &apos;buttonClicked&apos; }</code> every time that button is clicked:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actions</span> (<span class="hljs-params">sources</span>) </span>{
+  <span class="hljs-keyword">const</span> button = sources.DOM.select(<span class="hljs-string">&apos;button&apos;</span>)
+
+  <span class="hljs-keyword">return</span> [
+    button.events(<span class="hljs-string">&apos;click&apos;</span>)
+      .mapTo({ type: <span class="hljs-string">&apos;buttonClicked&apos;</span> })
+  ]
+}
+</code></pre>
+<h3 id="reducers">Reducers</h3>
+<p>To update our component we need to change its state, which is done by defining a <code>reducer</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducers</span> (<span class="hljs-params">sources</span>) </span>{
+  <span class="hljs-keyword">return</span> [
+    sources.actions
+      .filterByType(<span class="hljs-string">&apos;buttonClicked&apos;</span>)
+      .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state</span>) </span>{
+        state.timesClicked++
+        <span class="hljs-keyword">return</span> state
+      })
+  ]
+}
+</code></pre>
+<h3 id="defining-a-recycle-component">Defining a Recycle component</h3>
+<p>We now have all the ingredients for defining our component: </p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ClickCounter</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    initialState: {
+      timesClicked: <span class="hljs-number">0</span>
+    },
+    actions,
+    reducers,
+    view
+  }
+}
+</code></pre>
+<p>or if you prefer writing it all in a single function:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SingleCounter</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    initialState: {
+      timesClicked: <span class="hljs-number">0</span>
+    },
+
+    actions(sources) {
+      <span class="hljs-keyword">const</span> button = sources.DOM.select(<span class="hljs-string">&apos;button&apos;</span>)
+
+      <span class="hljs-keyword">return</span> [
+        button.events(<span class="hljs-string">&apos;click&apos;</span>)
+          .mapTo({ type: <span class="hljs-string">&apos;buttonClicked&apos;</span> })
+      ]
+    },
+
+    reducers(sources) {
+      <span class="hljs-keyword">return</span> [
+        sources.actions
+          .filterByType(<span class="hljs-string">&apos;buttonClicked&apos;</span>)
+          .reducer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state</span>) </span>{
+            state.timesClicked++
+            <span class="hljs-keyword">return</span> state
+          })
+      ]
+    },
+
+    view(jsx, props, state) {
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Times clicked: {state.timesClicked}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+    }
+  }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="HelloWorld.html" class="navigation navigation-prev " aria-label="Previous page: Hello World">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ParentChild.html" class="navigation navigation-next " aria-label="Next page: Parent-Child Relationship">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Stateful Component","level":"1.2.2","depth":2,"next":{"title":"Parent-Child Relationship","level":"1.2.3","depth":2,"path":"docs/quick-start/ParentChild.md","ref":"docs/quick-start/ParentChild.md","articles":[]},"previous":{"title":"Hello World","level":"1.2.1","depth":2,"path":"docs/quick-start/HelloWorld.md","ref":"docs/quick-start/HelloWorld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/recyclejs/recycle/tree/master"},"github":{"url":"https://github.com/recyclejs/recycle/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Recycle","gitbook":">=3.2.1"},"file":{"path":"docs/quick-start/StatefulComponent.md","mtime":"2016-12-06T14:25:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-14T23:46:53.023Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
