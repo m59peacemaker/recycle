@@ -1,24 +1,41 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
 import { Subject } from 'rxjs/Subject'
-import { Observable } from 'rxjs/Observable'
-import 'rxjs/add/observable/merge'
-import 'rxjs/add/observable/fromEvent'
-import 'rxjs/add/operator/withLatestFrom'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/mapTo'
-import 'rxjs/add/operator/do'
-import 'rxjs/add/operator/share'
-import 'rxjs/add/operator/switch'
-import 'rxjs/add/operator/filter'
-import 'rxjs/add/operator/merge'
+import {Observable} from 'rxjs/Observable'
+import {of} from 'rxjs/observable/of'
+
+import {fromEvent} from 'rxjs/observable/fromEvent'
+import {merge} from 'rxjs/observable/merge'
+
+import {share} from 'rxjs/operator/share'
+import {map} from 'rxjs/operator/map'
+import {filter} from 'rxjs/operator/filter'
+import {_switch} from 'rxjs/operator/switch'
+import {_do} from 'rxjs/operator/do'
+
+const O = {
+  map: (source, ...args) => share.call(map.call(source, ...args)),
+  filter: (source, ...args) => {
+    if (!(source instanceof Subject)) {
+      source = of(source)
+    }
+    return share.call(filter.call(source, ...args))
+  },
+  switch: (source, ...args) => share.call(_switch.call(source, ...args)),
+  do: (source, ...args) => share.call(_do.call(source, ...args)),
+  merge: (...args) => share.call(merge(...args)),
+  fromEvent: (...args) => share.call(fromEvent(...args)),
+  next: (subject, ...args) => subject.next(...args),
+  subscribe: (source, ...args) => source.subscribe(...args)
+}
 
 export default {
   BaseComponent: React.Component,
   createElement: React.createElement,
   findDOMNode: ReactDOM.findDOMNode,
   render: ReactDOM.render,
-  Observable,
+  O,
   Subject
 }
 
@@ -27,6 +44,6 @@ export const jsx = React.createElement
 export {
   React,
   ReactDOM,
-  Observable,
+  O,
   Subject
 }

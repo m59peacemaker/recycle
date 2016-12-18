@@ -1,3 +1,6 @@
+import 'rxjs/add/operator/mapTo'
+import '../../../adapter/rx-add'
+
 export default function SingleCounter () {
   return {
     initialState: {

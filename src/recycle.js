@@ -3,7 +3,7 @@ export default function ({ adapter }) {
     BaseComponent,
     createElement,
     findDOMNode,
-    Observable,
+    O,
     Subject
   } = adapter
 
@@ -32,10 +32,10 @@ export default function ({ adapter }) {
 
     const componentSources = {
       DOM: { select: generateDOMSource(domNodes) },
-      childrenActions: childrenActions.switch().share(),
+      childrenActions: O.switch(childrenActions),
       actions: new Subject(),
-      props: propsReference.share(),
-      state: stateReference.share()
+      props: propsReference,
+      state: stateReference
     }
 
     function updateStatePropsReference () {
@@ -63,12 +63,16 @@ export default function ({ adapter }) {
 
         componentDidMount () {
           if (config.actions) {
-            Observable.merge(...forceArray(config.actions(componentSources)))
-              .filter(action => action)
-              .subscribe(componentSources.actions)
+            O.subscribe(
+              O.filter(
+                O.merge(...forceArray(config.actions(componentSources))),
+                action => action
+              ),
+              componentSources.actions
+            )
           }
           updateStatePropsReference()
-          this.stateSubsription = getStateStream().merge(injectedState).subscribe((newVal) => {
+          this.stateSubsription = O.subscribe(O.merge(getStateStream(), injectedState), (newVal) => {
             const newState = newVal.state
             const newAction = newVal.action
 
@@ -132,7 +136,7 @@ export default function ({ adapter }) {
 
         componentWillUnmount () {
           if (this.stateSubsription) {
-            this.stateSubsription.unsubscribe()
+            O.unsubscribe(this.stateSubsription)
           }
           if (parent) {
             parent.removeChild(thisComponent)
@@ -190,17 +194,24 @@ export default function ({ adapter }) {
         parent.updateChildrenActions()
       }
 
-      const newActions = Observable.merge(
-        ...forceArray(getChildren())
-          .filter(component => component.getActions())
-          .map(component => component.getActions().map(a => {
-            a.childComponent = component.getConstructor()
-            return a
-          }))
+      const newActions = O.merge(
+        O.map(
+          O.filter(
+            ...forceArray(getChildren()),
+            component => component.getActions()
+          ),
+          component => O.map(
+            component.getActions(),
+            a => {
+              a.childComponent = component.getConstructor()
+              return a
+            }
+          )
+        )
       )
 
       if (newActions) {
-        childrenActions.next(newActions)
+        O.next(childrenActions, newActions)
       }
     }
 
@@ -223,17 +234,22 @@ export default function ({ adapter }) {
 
     function getStateStream () {
       const reducers = [
-        componentSources.actions
-          .do(a => emit('action', [a, thisComponent]))
-          .filter(() => false)
+        O.filter(
+          O.do(
+            componentSources.actions,
+            a => emit('action', [a, thisComponent])
+          ),
+          () => false
+        )
       ]
 
       if (config.reducers) {
         reducers.push(...forceArray(config.reducers(componentSources)))
       }
 
-      return Observable.merge(...reducers)
-        .map(({ reducer, action }) => {
+      return O.map(
+        O.merge(...reducers),
+        ({ reducer, action }) => {
           let newState = reducer({...state}, action)
           emit('newState', [thisComponent, newState, action])
           if (newState === false) {
@@ -244,8 +260,8 @@ export default function ({ adapter }) {
             reducer,
             action
           }
-        })
-        .share()
+        }
+      )
     }
 
     function removeChild (component) {
@@ -325,7 +341,7 @@ export default function ({ adapter }) {
             domNodes[selector][event] = new Subject()
           }
 
-          return domNodes[selector][event].switch().share()
+          return O.switch(domNodes[selector][event])
         }
       }
     }
@@ -336,7 +352,10 @@ export default function ({ adapter }) {
       Object.keys(domNodes[selector]).forEach((event) => {
         const domEl = el.querySelector(selector)
         if (domEl) {
-          domNodes[selector][event].next(Observable.fromEvent(domEl, event))
+          O.next(
+            domNodes[selector][event],
+            O.fromEvent(domEl, event)
+          )
         }
       })
     })
@@ -367,8 +386,6 @@ export default function ({ adapter }) {
       }
     }
   }
-
-  applyRecycleObservable(Observable)
 
   return {
     on: addListener,
@@ -471,25 +488,4 @@ export function isReactComponent (constructor) {
 export function forceArray (arr) {
   if (!Array.isArray(arr)) return [arr]
   return arr
-}
-
-export function applyRecycleObservable (Observable) {
-  Observable.prototype.reducer = function reducer (reducerFn) {
-    return this.map(action => ({ reducer: reducerFn, action }))
-  }
-
-  Observable.prototype.filterByType = function filterByType (type) {
-    return this.filter(action => action.type === type)
-  }
-
-  Observable.prototype.filterByComponent = function filterByComponent (constructor) {
-    return this.filter(action => action.childComponent === constructor)
-  }
-
-  Observable.prototype.mapToLatest = function mapToLatest (sourceFirst, sourceSecond) {
-    if (sourceSecond) {
-      return this.mapToLatest(sourceFirst).withLatestFrom(sourceSecond, (props, state) => ({props, state}))
-    }
-    return this.withLatestFrom(sourceFirst, (first, second) => second)
-  }
 }

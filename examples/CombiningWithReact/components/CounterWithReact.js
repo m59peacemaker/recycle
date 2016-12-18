@@ -1,4 +1,8 @@
 import ReactCounter from './ReactComponent'
+import '../../../adapter/rx-add'
+
+import 'rxjs/add/operator/mapTo'
+
 
 export default function SingleCounterWithReact () {
   return {
