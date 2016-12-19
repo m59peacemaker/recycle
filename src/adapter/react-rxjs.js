@@ -15,19 +15,20 @@ import {_switch} from 'rxjs/operator/switch'
 import {_do} from 'rxjs/operator/do'
 
 const O = {
-  map: (source, ...args) => share.call(map.call(source, ...args)),
+  map: (source, ...args) => share.call(map.apply(source, args)),
   filter: (source, ...args) => {
     if (!(source instanceof Subject)) {
       source = of(source)
     }
-    return share.call(filter.call(source, ...args))
+    return share.call(filter.apply(source, args))
   },
-  switch: (source, ...args) => share.call(_switch.call(source, ...args)),
-  do: (source, ...args) => share.call(_do.call(source, ...args)),
+  switch: (source, ...args) => share.call(_switch.apply(source, args)),
+  do: (source, ...args) => share.call(_do.apply(source, args)),
   merge: (...args) => share.call(merge(...args)),
   fromEvent: (...args) => share.call(fromEvent(...args)),
   next: (subject, ...args) => subject.next(...args),
-  subscribe: (source, ...args) => source.subscribe(...args)
+  subscribe: (source, ...args) => source.subscribe(...args),
+  unsubscribe: (source, ...args) => source.unsubscribe(...args)
 }
 
 export default {
